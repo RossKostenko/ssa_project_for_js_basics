@@ -50,16 +50,20 @@ securitySection.innerHTML += `
 </div>
 `
 function popImage() {
-    let a = document.getElementById('lock_container');
+     let a = document.getElementById('lock_container');
     a.innerHTML = '';
 }
 let image = document.getElementById('#lock');
 image.addEventListener('click', popImage);
 
 // Light section 
-const lightsSection = document.getElementById('lights_section');
-lightsSection.innerHTML += `
-<div id = 'light_container'>
-<img id = 'light_image' src = 'img/locked.png' alt = 'Light Image'>
+const lightSection = document.getElementById('lights_section');
+lightSection.innerHTML += `
+<div id = 'lights_container'>
+    <image id = 'lights_image' src = 'img/unlocked.png' alt = 'Light Image'>
 </div>
-`
+<div id = 'lights_buttons_container'>
+<button>up</button>
+<button>down</button>
+</div>
+` 
