@@ -1,0 +1,59 @@
+body {
+    background-color: #282728;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    margin: 100px;
+}
+
+h1 {
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    margin: 0 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sectionContainer {
+   height: 300px;
+   width: 300px;
+   border-radius: 27px;
+   background-color: black;
+   margin: 10px;
+}
+
+
+#currentDay {
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    font-weight: 60;
+    letter-spacing: 3px;
+    opacity: 80%;
+
+}
+
+#monthDay {
+    display: flex;
+    justify-content: center;
+    font-size: 150px;
+    font-weight: 60;
+    opacity: 80%;  
+}
+
+#lock_container {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+    margin: 0 25px 0 25px;
+}
+
+#lock {
+    opacity: 80%;
+}
