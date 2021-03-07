@@ -4,10 +4,13 @@ body {
     color: white;
     max-width: 1200px;
     margin: auto;
+    
 }
 
 main {
     margin: 100px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
 }
 
 h1 {
@@ -24,7 +27,8 @@ h1 {
    width: 300px;
    border-radius: 27px;
    background-color: black;
-   margin: 10px;
+   margin: 20px 20px 20px 20px; 
+   
 }
 
 
@@ -68,5 +72,104 @@ h1 {
 
 #lights_buttons_container {
     display: flex;
-     justify-content: space-around;
+    justify-content: space-around;
 }
+
+#light_img {
+    opacity: 70%;
+}
+
+.light_buttons {
+    background-color: black;
+    width: 50px; 
+    height: 25px;
+    border-radius: 3px;
+    opacity: 70%;
+}
+
+#light_button_up {
+    background-image: url(../img/up_button.png);;
+}
+
+#lights_status {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: 10;
+    letter-spacing: 1px;
+    opacity: 70%;
+}
+
+#heater_container {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    margin: 25px 60px 10px 60px;
+}
+
+.selection_containers {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.selectors {
+    width: 225px;
+    height: 25px;
+    color: white;
+    background-color: black;
+    opacity: 70%;
+    text-align: center;
+}
+
+#heater_image {
+    opacity: 70%;
+}
+
+#music_container {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    margin: 25px 60px 10px 60px;
+}
+
+#music_image {
+    opacity: 70%;
+}
+
+#cleaning_container {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    height: 170px;
+    margin: 25px 60px 10px 60px;
+}
+
+#cleaning_image {
+    opacity: 70%;
+}
+
+#pet_container {
+    display: flex;
+    justify-content: center;
+    width: 225px;
+    height: 225px;
+    margin: 25px 30px 0 30px;
+}
+
+#pet_image {
+    opacity: 70%;
+}
+
+#blow_container {
+    display: flex;
+    justify-content: center;
+    width: 225px;
+    height: 225px;
+    margin: 25px 30px 0 30px;
+}
+
+
+
