@@ -234,6 +234,26 @@ cleaningSection.innerHTML += `
 </div>
 `
 
+let cleaningArray = {
+	itsclean : ['No Need to clean'],
+	timetoclean :['Clean the dishes', 'Clean Clothes', 'Clean the Floor'],
+} 
+
+let cleaningSelector = document.getElementById('cleaning_on_off');
+cleaningSelector.addEventListener("change", getCleaningOptionFromArray);
+
+let cleanOptions = document.getElementById('cleaning_options_id');
+
+function getCleaningOptionFromArray() {
+	cleanOptions.innerHTML = '';
+    let selectedCleaningBasics = cleaningSelector.value;
+	for (let i = 0; i < cleaningArray[selectedCleaningBasics].length; i++) {
+		let new_option = document.createElement('option');
+		new_option.innerHTML = cleaningArray[selectedCleaningBasics][i];
+        cleanOptions.appendChild(new_option);
+	}
+}
+
 // Pet Section 
 
 const petSection = document.getElementById('pet_section');
