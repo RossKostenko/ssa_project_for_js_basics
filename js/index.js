@@ -261,13 +261,49 @@ petSection.innerHTML += `
 <div id = 'pet_container'>
     <img id = 'pet_image' src = 'img/cat.png' alt = 'Pet Image'>
 </div>
+<div id = 'cat_status'>
+    Im Home
+<div>
 `
+let petControl = 1;
+function catStatus() {
+   let cat = Math.floor(Math.random()*2,5);
+   let petHome = document.getElementById('pet_image');
+   let catInfo = document.getElementById('cat_status')
+    if (cat === 0) {
+        petHome.src = 'img/cat.png';
+        catInfo.innerHTML = 'Im Home';
+        petControl = 1
+    } else {
+        petHome.src = 'img/cataway.png';
+        catInfo.innerHTML = 'Find me';
+        petControl = 0;
+    }
+}
+setInterval(catStatus, 10000);
 
 // Dont press this button
 
 const blowSection = document.getElementById('blow_the_house');
 blowSection.innerHTML += `
 <div id = 'blow_container'>
-    <button> DONT PRESS THIS BUTTON</button>
+    <button id = 'blow_button'> DONT PRESS THIS BUTTON</button>
 </div>
 `
+
+const blowThisHouse = document.getElementById('blow_button')
+
+function blowUp() {
+    if (petControl === 1) {
+        alert('You are insane cat is in the house!!!!')
+    } else {
+        let mainHtm = document.getElementById('main_id');
+        mainHtm.innerHTML = `
+        <img src = 'img/boom.jpg' alt = 'Hose Blown'>
+        `;
+        mainHtm.style.backgroundColor = 'white';
+        mainHtm.style.display = 'flex';
+        mainHtm.style.justifyContent = 'center'
+    }
+}
+blowThisHouse.addEventListener('click', blowUp);
