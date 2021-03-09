@@ -158,9 +158,11 @@ let heatOptions = document.getElementById('heat_options_id');
 function getHeatOptionFromArray() {
 	heatOptions.innerHTML = '';
     let selectedHeaterBasics = heatSelector.value;
+    let heaterImage = document.getElementById('heater_image');
     if (selectedHeaterBasics === 'heaton') {
-        let heaterImage = document.getElementById('heater_image');
         heaterImage.src = 'img/heating.png'
+    } else {
+        heaterImage.src = 'img/noheating.png'
     }
 	for (let i = 0; i < heatArray[selectedHeaterBasics].length; i++) {
 		let new_option = document.createElement('option');
@@ -203,9 +205,11 @@ let musicOptions = document.getElementById('music_options_id');
 function getMusicOptionFromArray() {
 	musicOptions.innerHTML = '';
     let selectedMusicBasics = musicSelector.value;
+    let musicImage = document.getElementById('music_image');
     if (selectedMusicBasics === 'musicon') {
-        let musicImage = document.getElementById('music_image');
-        musicImage.src = 'img/music.png'
+        musicImage.src = 'img/music.png';
+    } else {
+        musicImage.src = 'img/music_off.png';
     }
 	for (let i = 0; i < musicArray[selectedMusicBasics].length; i++) {
 		let new_option = document.createElement('option');
